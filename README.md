@@ -23,5 +23,10 @@ npm run build    # type-checks, then builds into dist/
 
 ## Deploy
 
-Cloudflare Pages: build command `npm run build`, output directory `dist`.
+Hosted on Cloudflare as static assets (`wrangler.jsonc`), free.
+
+```bash
+npm run deploy   # builds, then uploads dist/ with Wrangler
+```
+
 Node 22 (pinned in `.node-version`).
