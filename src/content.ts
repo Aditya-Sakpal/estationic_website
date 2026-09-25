@@ -11,6 +11,8 @@
 export const LINKS = {
   demo: "https://cal.com/estationic/demo",
   email: "info@estationic.com",
+  // opens a Gmail draft addressed to us, in a new tab
+  compose: "https://mail.google.com/mail/?view=cm&fs=1&to=info%40estationic.com&su=Estationic%20enquiry",
 };
 
 export const NAV = [

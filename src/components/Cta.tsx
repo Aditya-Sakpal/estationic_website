@@ -19,7 +19,7 @@ export function Cta() {
             <Button href={LINKS.demo} arrow>
               {CTA.primary}
             </Button>
-            <Button href={`mailto:${LINKS.email}`} tone="line">
+            <Button href={LINKS.compose} tone="line">
               {CTA.secondary}
             </Button>
           </Reveal>

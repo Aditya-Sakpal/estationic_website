@@ -22,7 +22,7 @@ export function Hero() {
           <Button href={LINKS.demo} arrow>
             {HERO.primary}
           </Button>
-          <Button href="#product" tone="line" icon={<ArrowDown size={16} strokeWidth={2} aria-hidden />}>
+          <Button href="#marketing" tone="line" icon={<ArrowDown size={16} strokeWidth={2} aria-hidden />}>
             {HERO.secondary}
           </Button>
         </Reveal>

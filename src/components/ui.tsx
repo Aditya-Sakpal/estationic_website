@@ -1,6 +1,5 @@
 import { ArrowRight } from "lucide-react";
 import type { ReactNode } from "react";
-import { LINKS } from "../content";
 import { E_PATH } from "../lib/glyphs";
 
 export function Logo({ size = 28 }: { size?: number }) {
@@ -32,14 +31,14 @@ export function Button({
   icon?: ReactNode;
   className?: string;
 }) {
-  // the booking calendar opens beside the page, so the visitor keeps their place
-  const newTab = href === LINKS.demo;
-  const external = href.startsWith("http");
+  // the booking calendar and the Gmail draft open beside the page, so the
+  // visitor keeps their place
+  const newTab = href.startsWith("http");
   return (
     <a
       href={href}
       className={`btn btn-${tone}${className ? ` ${className}` : ""}`}
-      {...(newTab ? { target: "_blank", rel: "noopener noreferrer" } : external ? { rel: "noopener" } : {})}
+      {...(newTab ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >
       {icon}
       <span>{children}</span>

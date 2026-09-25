@@ -29,7 +29,7 @@ export function Footer() {
             <Button href={LINKS.demo} arrow>
               Book a demo
             </Button>
-            <a className="footer-mail" href={`mailto:${LINKS.email}`}>
+            <a className="footer-mail" href={LINKS.compose} target="_blank" rel="noopener noreferrer">
               <Mail size={16} strokeWidth={1.8} aria-hidden />
               {LINKS.email}
             </a>
