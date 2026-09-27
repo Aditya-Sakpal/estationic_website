@@ -38,7 +38,6 @@ export const LOGOS_LABEL = "Trusted by teams across real estate";
 export const CLIENTS = [
   { name: "Betterrwalls", src: "/clients/betterrwalls.png", height: 30 },
   { name: "Goldmark Developers", src: "/clients/goldmark.png", height: 36 },
-  { name: "Kukreja Infrastructures", src: "/clients/kukreja.png", height: 46 },
   { name: "Subhadra Estates", src: "/clients/subhadra.png", height: 50 },
   { name: "House of Media", src: "/clients/house-of-media.png", height: 38, wordmark: "House of Media" },
 ];
