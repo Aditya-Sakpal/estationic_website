@@ -1,7 +1,7 @@
 /*
  * Every word on the page lives here, so copy changes never touch layout code.
  *
- * Money is always written the Indian way (Rs 39,999, Rs 1,29,999), never in
+ * Money is always written the Indian way (Rs 64,999, Rs 1,29,999), never in
  * dollars.
  *
  * Compliance copy says "RERA" and never names one state: state rules are
@@ -188,14 +188,14 @@ export const PRICING = {
     {
       name: "Launch",
       blurb: "For a single tower, up to about 500 leads a month.",
-      price: "Rs 39,999",
+      price: "Rs 64,999",
       period: "per project a month, plus GST",
       popular: false,
       features: [
         "Lead Qualifier and Visit Confirmer agents",
         "1,500 AI call minutes",
         "3 calling channels",
-        "40 image posts, 8 carousels, 4 reels",
+        "40 image posts, 8 carousels, 5 videos",
         "1 phone number",
         "All 4 AI voices",
         "Unlimited users and channel partners",
@@ -204,14 +204,14 @@ export const PRICING = {
     {
       name: "Growth",
       blurb: "For a busy launch, up to about 1,300 leads a month.",
-      price: "Rs 79,999",
+      price: "Rs 1,29,999",
       period: "per project a month, plus GST",
       popular: true,
       features: [
         "Everything in Launch, plus the Re-engager and Post-visit Follow-up agents",
         "4,000 AI call minutes",
         "6 calling channels",
-        "100 image posts, 20 carousels, 12 reels",
+        "100 image posts, 20 carousels, 10 videos",
         "2 phone numbers",
         "All 4 AI voices",
         "Unlimited users and channel partners",
@@ -220,14 +220,14 @@ export const PRICING = {
     {
       name: "Scale",
       blurb: "For a township, up to about 2,200 leads a month.",
-      price: "Rs 1,29,999",
+      price: "Rs 1,99,999",
       period: "per project a month, plus GST",
       popular: false,
       features: [
         "All 6 agents, including the Inbound Receptionist and CP Desk",
         "6,500 AI call minutes",
         "10 calling channels",
-        "200 image posts, 40 carousels, 25 reels",
+        "200 image posts, 40 carousels, 15 videos",
         "2 phone numbers",
         "All 4 AI voices",
         "Unlimited users and channel partners",
@@ -238,16 +238,17 @@ export const PRICING = {
     { title: "Setup", body: "Rs 49,999 for your first project, Rs 14,999 for each one after." },
     { title: "30-day pilot", body: "Rs 29,999, adjusted against the setup fee when you sign." },
     { title: "Pay yearly", body: "Pay for 10 months and get 12." },
-    { title: "More projects", body: "10% off from 3 projects. 20% off from 5, with minutes pooled across them." },
+    { title: "More projects", body: "10% off from 3 projects. 20% off from 5, with minutes and posts pooled across them." },
   ],
   topupsTitle: "Top-ups, prepaid",
   topups: [
     { item: "1,000 AI call minutes", price: "Rs 10,000" },
-    { item: "5,000 AI call minutes", price: "Rs 45,000" },
-    { item: "10,000 AI call minutes, on Scale", price: "Rs 80,000" },
+    { item: "5,000 AI call minutes, by bank transfer", price: "Rs 45,000" },
+    { item: "10,000 AI call minutes, on Scale, by bank transfer", price: "Rs 80,000" },
     { item: "Image post", price: "Rs 49" },
     { item: "Carousel", price: "Rs 149" },
-    { item: "Reel", price: "Rs 299" },
+    { item: "Extra carousel slide", price: "Rs 59" },
+    { item: "Video, any kind", price: "Rs 5,499" },
     { item: "Extra calling channel", price: "Rs 999 / month" },
     { item: "Extra agent on Launch", price: "Rs 4,999 / month" },
     { item: "Extra phone number", price: "Rs 999 / month" },
@@ -256,7 +257,7 @@ export const PRICING = {
   fine: [
     "Included minutes reset every month. Top-ups last 12 months.",
     "Usage is prepaid, with a heads-up when you reach 80%.",
-    "Calls go out between 10 am and 9 pm, with at most 3 attempts per lead.",
+    "Calls go out between 10 am and 9 pm. A lead we cannot reach is tried up to 3 times a day for 3 days.",
     "You only pay for posts that pass the checks.",
   ],
 };
