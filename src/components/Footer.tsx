@@ -2,7 +2,9 @@ import { Mail } from "lucide-react";
 import { FOOTER, LINKS } from "../content";
 import { Button, Logo } from "./ui";
 
-export function Footer() {
+export function Footer({ base = "" }: { base?: string }) {
+  // on the legal pages the section anchors live on the home page
+  const at = (href: string) => (href.startsWith("#") ? `${base}${href}` : href);
   return (
     <footer className="footer">
       <div className="frame footer-inner">
@@ -16,7 +18,7 @@ export function Footer() {
             <ul>
               {c.links.map((l) => (
                 <li key={l.label}>
-                  <a href={l.href}>{l.label}</a>
+                  <a href={at(l.href)}>{l.label}</a>
                 </li>
               ))}
             </ul>
@@ -42,7 +44,11 @@ export function Footer() {
       </div>
       <div className="frame footer-base">
         <p>© {new Date().getFullYear()} Estationic. All rights reserved.</p>
-        <p>Made for developers across India</p>
+        <nav className="footer-legal" aria-label="Legal">
+          <a href="/privacy">Privacy policy</a>
+          <a href="/terms">Terms of service</a>
+          <span>Made for developers across India</span>
+        </nav>
       </div>
     </footer>
   );
