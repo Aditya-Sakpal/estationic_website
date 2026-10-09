@@ -10,7 +10,7 @@ import { Faq } from "./components/Faq";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { Integrations } from "./components/Integrations";
-import { Logos } from "./components/Logos";
+// import { Logos } from "./components/Logos";
 import { Nav } from "./components/Nav";
 import { Pricing } from "./components/Pricing";
 import { Stats } from "./components/Stats";
@@ -43,8 +43,10 @@ export default function App() {
       <main id="main">
         <Hero />
         <Rule />
+        {/* Client logos, hidden for now (9 October 2026).
         <Logos />
         <Rule />
+        */}
         <Marketing />
         <Rule />
         <Sales />
