@@ -179,11 +179,14 @@ export const INTEGRATIONS = {
   body: "Ads run from your own Meta and Google accounts, conversations happen on WhatsApp, and your CRM stays the record.",
 };
 
-/* Per project, per month, before GST. Users and channel partners are never
-   charged for, which is the pricing model: a project, not a seat. */
+/* Two lists. A developer or a mandate firm pays per project, per month,
+   before GST; users and the channel partners on its projects are never
+   charged for. A channel partner works many developers' projects at once, so
+   it pays one price a month for the whole firm (decided 6 October 2026). */
 export const PRICING = {
   title: ["Priced per project,", "never per seat"],
-  body: "One monthly price for each project, plus GST. Every plan includes unlimited users and channel partners, and all four AI voices.",
+  body: "One monthly price for each project, plus GST. Every plan includes unlimited users, and channel partners working your projects are free.",
+  tabs: { project: "Developers and mandate firms", partner: "Channel partners" },
   plans: [
     {
       name: "Launch",
@@ -197,8 +200,8 @@ export const PRICING = {
         "3 calling channels",
         "40 image posts, 8 carousels, 5 videos",
         "1 phone number",
-        "All 4 AI voices",
-        "Unlimited users and channel partners",
+        "2 AI voices",
+        "Unlimited users; channel partners free",
       ],
     },
     {
@@ -213,8 +216,8 @@ export const PRICING = {
         "6 calling channels",
         "100 image posts, 20 carousels, 10 videos",
         "2 phone numbers",
-        "All 4 AI voices",
-        "Unlimited users and channel partners",
+        "3 AI voices",
+        "Unlimited users; channel partners free",
       ],
     },
     {
@@ -230,7 +233,7 @@ export const PRICING = {
         "200 image posts, 40 carousels, 15 videos",
         "2 phone numbers",
         "All 4 AI voices",
-        "Unlimited users and channel partners",
+        "Unlimited users; channel partners free",
       ],
     },
   ],
@@ -260,6 +263,69 @@ export const PRICING = {
     "Calls go out between 10 am and 9 pm. A lead we cannot reach is tried up to 3 times a day for 3 days.",
     "You only pay for posts that pass the checks.",
   ],
+  partner: {
+    title: ["One plan for your firm,", "every project included"],
+    body: "One monthly price for your whole firm, plus GST, however many developers and projects you sell for. Every plan includes unlimited users.",
+    plans: [
+      {
+        name: "Solo",
+        blurb: "For a broker or a small team selling up to 5 projects.",
+        price: "Rs 24,999",
+        period: "per firm a month, plus GST",
+        popular: false,
+        features: [
+          "Lead Qualifier and Visit Confirmer agents",
+          "400 AI call minutes",
+          "2 calling channels",
+          "20 image posts, 4 carousels, 1 video",
+          "1 phone number",
+          "Up to 5 projects at once",
+          "2 AI voices",
+          "Unlimited users",
+        ],
+      },
+      {
+        name: "Team",
+        blurb: "For a growing firm selling up to 15 projects.",
+        price: "Rs 59,999",
+        period: "per firm a month, plus GST",
+        popular: true,
+        features: [
+          "Everything in Solo, plus the Re-engager and Post-visit Follow-up agents",
+          "1,200 AI call minutes",
+          "4 calling channels",
+          "60 image posts, 12 carousels, 3 videos",
+          "1 phone number",
+          "Up to 15 projects at once",
+          "3 AI voices",
+          "Unlimited users",
+        ],
+      },
+      {
+        name: "Firm",
+        blurb: "For a large firm selling up to 30 projects.",
+        price: "Rs 1,29,999",
+        period: "per firm a month, plus GST",
+        popular: false,
+        features: [
+          "Every agent, including the Inbound Receptionist",
+          "3,500 AI call minutes",
+          "8 calling channels",
+          "150 image posts, 30 carousels, 7 videos",
+          "2 phone numbers",
+          "Up to 30 projects at once",
+          "All 4 AI voices",
+          "Unlimited users",
+        ],
+      },
+    ],
+    terms: [
+      { title: "Setup", body: "Rs 14,999, once for your firm." },
+      { title: "Every developer", body: "Register buyers, share your links and co-branded posts, and track brokerage with every developer you sell for." },
+      { title: "Pay yearly", body: "Pay for 10 months and get 12." },
+      { title: "On a developer's desk", body: "Working a developer's project through their WhatsApp stays free. The plan is for running your own leads, calls and ads." },
+    ],
+  },
 };
 
 export const FAQ = {
@@ -292,7 +358,11 @@ export const FAQ = {
     },
     {
       q: "Can the AI caller sound like our brand?",
-      a: "Every plan includes four voices: a warm female voice, a calm senior advisor, a cheerful young voice for re-engagement, and an English-first voice for NRI buyers. Rename any of them to match your team, for free.",
+      a: "Launch includes two voices, Growth a third and Scale all four, men's and women's. Rename any of them to match your team, for free.",
+    },
+    {
+      q: "We are a channel partner. How are we charged?",
+      a: "One monthly price for your whole firm, never per project or per developer. Solo covers up to 5 projects at once, Team 15 and Firm 30. Working a developer's project through their WhatsApp stays free.",
     },
     {
       q: "What is a calling channel?",

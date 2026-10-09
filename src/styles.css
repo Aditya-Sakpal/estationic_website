@@ -961,6 +961,63 @@ main,
 .pricing {
   padding-bottom: 0;
 }
+.pricing-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.pricing-intro .body {
+  max-width: 25em;
+}
+/* Who the prices are for: two prices lists behind one switch. */
+.audience {
+  display: inline-flex;
+  padding: 4px;
+  gap: 4px;
+  border: 1px solid var(--line-2);
+  border-radius: 7px;
+  background: var(--surface);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.04);
+}
+.audience-tab {
+  height: 36px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--body);
+  font: 500 14px/1 var(--text);
+  letter-spacing: -0.006em;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 0.25s,
+    color 0.25s;
+}
+.audience-tab:hover {
+  color: var(--ink);
+}
+.audience-tab.is-on {
+  background: var(--ink);
+  color: #fff;
+}
+.audience-tab:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+@media (max-width: 640px) {
+  .audience {
+    width: 100%;
+  }
+  .audience-tab {
+    flex: 1;
+    padding: 0 8px;
+    font-size: 13px;
+    white-space: normal;
+    line-height: 1.2;
+  }
+}
 .plans {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

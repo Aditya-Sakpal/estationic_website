@@ -1,29 +1,57 @@
+import { useState } from "react";
 import { CircleCheck } from "lucide-react";
 import { LINKS, PRICING } from "../content";
 import { Reveal, Words } from "../lib/motion";
 import { Button } from "./ui";
 
+type Audience = "project" | "partner";
+
 export function Pricing() {
+  const [who, setWho] = useState<Audience>("project");
+  const list =
+    who === "project"
+      ? { title: PRICING.title, body: PRICING.body, plans: PRICING.plans, terms: PRICING.terms }
+      : PRICING.partner;
+
   return (
     <section className="section pricing" id="pricing" aria-labelledby="pricing-title">
       <div className="frame">
         <div className="section-head is-split">
           <Words
+            key={`t-${who}`}
             as="h2"
             id="pricing-title"
             className="h2"
-            lines={[PRICING.title[0], { text: PRICING.title[1], className: "tone-2" }]}
+            lines={[list.title[0], { text: list.title[1], className: "tone-2" }]}
           />
-          <Words as="p" className="body" lines={[PRICING.body]} stagger={0.012} delay={0.2} />
+          <div className="pricing-intro">
+            <Words key={`b-${who}`} as="p" className="body" lines={[list.body]} stagger={0.012} delay={0.2} />
+            <div className="audience" role="tablist" aria-label="Who the prices are for">
+              {(Object.keys(PRICING.tabs) as Audience[]).map((k) => (
+                <button
+                  key={k}
+                  type="button"
+                  role="tab"
+                  id={`aud-${k}`}
+                  aria-selected={who === k}
+                  aria-controls="pricing-plans"
+                  className={`audience-tab${who === k ? " is-on" : ""}`}
+                  onClick={() => setWho(k)}
+                >
+                  {PRICING.tabs[k]}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
       <div className="rule" aria-hidden>
         <span className="cross cross-l" />
         <span className="cross cross-r" />
       </div>
-      <div className="frame plans">
-        {PRICING.plans.map((pl, k) => (
-          <Reveal key={pl.name} className={`plan${pl.popular ? " is-popular" : ""}`} delay={k * 0.08} y={20}>
+      <div className="frame plans" id="pricing-plans" role="tabpanel" aria-labelledby={`aud-${who}`}>
+        {list.plans.map((pl, k) => (
+          <Reveal key={`${who}-${pl.name}`} className={`plan${pl.popular ? " is-popular" : ""}`} delay={k * 0.08} y={20}>
             <div className="plan-head">
               <h3>
                 {pl.name}
@@ -58,8 +86,8 @@ export function Pricing() {
         <span className="cross cross-l" />
         <span className="cross cross-r" />
       </div>
-      <Reveal className="frame terms" y={16}>
-        {PRICING.terms.map((t) => (
+      <Reveal key={`terms-${who}`} className="frame terms" y={16}>
+        {list.terms.map((t) => (
           <div className="term" key={t.title}>
             <h3>{t.title}</h3>
             <p>{t.body}</p>
