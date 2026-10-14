@@ -6,6 +6,7 @@ import { Control } from "./components/Control";
 import { Marketing } from "./components/Marketing";
 import { Sales } from "./components/Sales";
 import { Cta } from "./components/Cta";
+import { Film } from "./components/Film";
 import { Faq } from "./components/Faq";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
@@ -42,6 +43,8 @@ export default function App() {
       <Nav />
       <main id="main">
         <Hero />
+        <Rule />
+        <Film />
         <Rule />
         {/* Client logos, hidden for now (9 October 2026).
         <Logos />

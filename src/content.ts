@@ -28,7 +28,18 @@ export const HERO = {
   title: ["Ads that comply.", "Leads that book."],
   sub: "Estationic runs your real estate sales and marketing on autopilot: compliant ads, an auto budget allocator, an AI caller that qualifies every lead and hands over to your team, and WhatsApp follow-ups through the site visit to the booking.",
   primary: "Book a demo",
-  secondary: "See how it works",
+  secondary: "Watch the film",
+};
+
+/* The launch film, under the hero (public/video). */
+export const FILM = {
+  title: ["See Estationic at work,", "from the ad to the site visit"],
+  body: "Two and a half minutes: the posts and ads it makes, the AI call that qualifies a buyer in Hindi, and the visit it books for your team.",
+  src: "/video/estationic-launch.mp4",
+  poster: "/video/estationic-launch-poster.jpg",
+  label: "Estationic launch film",
+  cta: "Play the film",
+  length: "2:34",
 };
 
 /* Clients, as monochrome marks cut from their own sites (public/clients).

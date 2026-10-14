@@ -1,4 +1,4 @@
-import { ArrowDown } from "lucide-react";
+import { Play } from "lucide-react";
 import { HeroArt } from "../art/HeroArt";
 import { HERO, LINKS } from "../content";
 import { Reveal, Words } from "../lib/motion";
@@ -22,7 +22,7 @@ export function Hero() {
           <Button href={LINKS.demo} arrow>
             {HERO.primary}
           </Button>
-          <Button href="#marketing" tone="line" icon={<ArrowDown size={16} strokeWidth={2} aria-hidden />}>
+          <Button href="#film" tone="line" icon={<Play size={15} strokeWidth={2.2} aria-hidden />}>
             {HERO.secondary}
           </Button>
         </Reveal>
