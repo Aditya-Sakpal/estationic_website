@@ -5,6 +5,8 @@
   // the company account (info@estationic.com), which also holds the estationic.com zone
   "account_id": "2a40e6fb48a574e423c58cc1132f9d92",
   "compatibility_date": "2026-09-23",
+  // answers byte ranges for the film (worker/index.ts); everything else is static
+  "main": "worker/index.ts",
   "workers_dev": true,
   "routes": [
     { "pattern": "estationic.com", "custom_domain": true },
@@ -12,6 +14,8 @@
   ],
   "assets": {
     "directory": "./dist",
-    "not_found_handling": "404-page"
+    "not_found_handling": "404-page",
+    "binding": "ASSETS",
+    "run_worker_first": ["/video/*"]
   }
 }
