@@ -47,6 +47,8 @@ export function Footer({ base = "" }: { base?: string }) {
         <nav className="footer-legal" aria-label="Legal">
           <a href="/privacy">Privacy policy</a>
           <a href="/terms">Terms of service</a>
+          <a href="/refunds">Cancellation and refunds</a>
+          <a href="/contact">Contact us</a>
           <span>Made for developers across India</span>
         </nav>
       </div>

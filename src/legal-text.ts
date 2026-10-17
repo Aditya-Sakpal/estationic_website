@@ -7,6 +7,9 @@ export type LegalSection = { heading: string; body: (string | string[])[] };
 export type LegalDoc = { title: string; updated: string; intro: string[]; sections: LegalSection[] };
 
 const CONTACT = "info@estationic.com";
+const COMPANY = "Estationic Private Limited";
+const CIN = "U62011MH2026PTC476763";
+const OFFICE = "CEN.196, Shastri Nagar, Vashinaka, Mahul Road, Mumbai 400074, Maharashtra, India";
 
 export const PRIVACY: LegalDoc = {
   title: "Privacy policy",
@@ -133,6 +136,7 @@ export const PRIVACY: LegalDoc = {
       heading: "14. Contact and grievances",
       body: [
         `For any question, request or complaint about your personal data, email our grievance officer at ${CONTACT}. If you are not satisfied with our answer, you may complain to the Data Protection Board of India.`,
+        `${COMPANY} (CIN ${CIN}), registered office ${OFFICE}.`,
       ],
     },
   ],
@@ -254,7 +258,63 @@ export const TERMS: LegalDoc = {
     },
     {
       heading: "17. Contact",
-      body: [`Questions about these terms: ${CONTACT}.`],
+      body: [`The service is provided by ${COMPANY} (CIN ${CIN}), registered office ${OFFICE}. Questions about these terms: ${CONTACT}.`],
     },
+  ],
+};
+
+export const REFUNDS: LegalDoc = {
+  title: "Cancellation and refund policy",
+  updated: "17 October 2026",
+  intro: [
+    `This policy explains how a subscription to Estationic is cancelled and when a payment is refunded. It applies to every payment made to ${COMPANY} for the service at app.estationic.com.`,
+  ],
+  sections: [
+    {
+      heading: "1. What you pay for",
+      body: [
+        "Plans are billed per active project per month, in advance, plus a one-time setup fee where your plan or order has one. Top-ups (extra call minutes, posts, carousels and videos) are prepaid and can be used for twelve months from purchase. All prices are exclusive of GST, which is added to the invoice.",
+      ],
+    },
+    {
+      heading: "2. Cancelling",
+      body: [
+        `You can cancel a plan at any time from Projects in the console, by retiring the project, or by writing to ${CONTACT}. The plan ends at the end of the month already paid for, and nothing is charged after that. You keep access to everything the project holds, to read and export, after it ends.`,
+        "Automatic payments for renewals or top-ups can be stopped at any time in Settings, Plan and usage. Stopping them cancels anything that was announced but not yet charged.",
+      ],
+    },
+    {
+      heading: "3. When we refund",
+      body: [
+        [
+          "A payment taken twice, or taken for the wrong amount, is refunded in full.",
+          "A payment taken after you cancelled is refunded in full.",
+          "If we could not provide the service you paid for because of a fault on our side, we refund the affected part, or credit it to your account if you prefer.",
+          "A top-up bought in error and not used at all may be refunded if you ask within 7 days of buying it.",
+        ],
+        "Except as above, a month already paid for, a setup fee once onboarding has started, and a top-up that has been used in part are not refunded. Calls placed, posts and videos made and messages sent use paid services the moment they are made and cannot be returned.",
+      ],
+    },
+    {
+      heading: "4. How refunds are made",
+      body: [
+        `Write to ${CONTACT} with your organisation's name and the invoice number. We reply within 3 working days. An approved refund is issued with a credit note against your invoice and paid back to the method you paid with, usually within 5 to 7 working days of approval, depending on your bank. A payment by bank transfer is refunded to the account it came from.`,
+      ],
+    },
+    {
+      heading: "5. Contact",
+      body: [`${COMPANY} (CIN ${CIN}), registered office ${OFFICE}. Email: ${CONTACT}.`],
+    },
+  ],
+};
+
+export const CONTACT_PAGE: LegalDoc = {
+  title: "Contact us",
+  updated: "17 October 2026",
+  intro: [`Estationic is a product of ${COMPANY}. Write to us for sales, support, billing or anything about your data, and we reply within one working day.`],
+  sections: [
+    { heading: "Email", body: [CONTACT] },
+    { heading: "Registered office", body: [`${COMPANY}`, OFFICE, `CIN ${CIN}`] },
+    { heading: "Support hours", body: ["Monday to Saturday, 10:00 to 19:00 IST."] },
   ],
 };
